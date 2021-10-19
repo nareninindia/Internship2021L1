@@ -70,3 +70,5 @@ Merge - Move the code from one branch to another branch
 Clone - Create a new local repo based on an existing remote repo.
 
 Exercise - Github.com, Sourcetree tool in laptop
+
+-----
