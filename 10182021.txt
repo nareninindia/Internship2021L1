@@ -1,0 +1,55 @@
+Repository or repo -> Store project files
+Github.com/bitbucket.com -> Project repos -> Store project files.
+
+Narendra -> 10 lines of code -> Remote repo -> Downloads the code from the remote repo -> Add 10 more lines to same file. -> Upload to remote repo -> Narendra - Download the latest code from the remote repo.
+
+Login.java
+Logout.java
+
+Logout.java -> 10 more lines, remove 2 lines of code
+
+Google drive -> Upload all the files everytime
+Google drive -> Upload only changed files
+Google drive -> Upload only changed lines
+
+Overwrite one other's code
+Drive may not have tested code
+Multiple files can't handle
+Multiple team members can't handle
+
+Version contrrol/Source control
+
+Git, Svn(Subversion), TFS(Microsoft), Mercurial
+
+Git, Github.com
+
+Git -> Concept
+Github.com -> Implementation
+Github -> Opensource -> Free
+
+Git: We'll see the changes we did only
+
+Repository - Place we upload the code to.
+Commit -> The process of uploading the code to repositories.
+Push -> The process of uploading the code to remote repository.
+Fetch -> The process of downloading the code from remote repositories.
+Pull -> The process of downloading the code from repositories.
+
+Git - Local repository, remote repository
+Svn - Remote repository
+
+Repository - Local repository - .git - Commit - Commit - Push - Remote repo - Fetch code - .git - Pull - File system
+
+Repository - Local Repository - Changes - Commit + Push - Remote repo - Fetch + Pull
+
+Commit - SHA256 key - order of commits maintained
+
+Repository - Multiple branches
+Branch -> Folder
+
+dev_order_lifecyle - Code specifically tracking order lifecycle (Place, Accept, Cook, Delivery) - tested
+master - Tested and reviewed code - Deploy
+
+dev_order_lifecyle(13) -> master(10)
+Pull request(PR) -> Show commits(3) -> Review the PR -> Merge
+dev_order_lifecyle(13) -> master(13)
