@@ -53,3 +53,20 @@ master - Tested and reviewed code - Deploy
 dev_order_lifecyle(13) -> master(10)
 Pull request(PR) -> Show commits(3) -> Review the PR -> Merge
 dev_order_lifecyle(13) -> master(13)
+
+Version control/source control
+Git
+Github.com
+Repository - Store code
+Branch - Folder
+Local, Remote repos - Local, Remote repository
+.git - Keeps track of changes, order of changes
+Commit - Sending code to local repo
+Push - Sending commits to remote repo
+Fetch - Getting a commit into .git
+Pull - Making changes to FS based on .git
+Pull request/PR - Review code from one branch to another branch
+Merge - Move the code from one branch to another branch
+Clone - Create a new local repo based on an existing remote repo.
+
+Exercise - Github.com, Sourcetree tool in laptop
