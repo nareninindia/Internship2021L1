@@ -26,7 +26,6 @@ public class Loops{
         sum = (index * (index + 1))/2;
         System.out.println("Sum by formula: " + sum);
 
-        // Exercise: 1- Infinite loops using for, while, do-while
         index = 1;
         do {
             if (index % 10 == 0) {
@@ -62,5 +61,20 @@ public class Loops{
         // for - initializations; conditon; execute {}; postExecution
         // while - condition; execute {}
         // do-while - execute {}; condition
+
+        // Exercise: 1- Infinite loops using for, while, do-while
+        // Exercise: 2- Run the programs using while and do-while
+        // 26th, 27th Oct programs - Put them in your Github
+
+        index = 1;
+        while (index <= 100) {
+            System.out.println("Number 1: " + index);
+            index++;
+            if (index % 10 == 0) {
+                continue;
+            }
+            System.out.println("Number 2: " + index);
+        }
+        System.out.println("Final: " + index);
      }
 }
