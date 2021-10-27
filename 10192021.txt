@@ -1,0 +1,13 @@
+10192021
+
+Sourcetree
+Connecting Github account in Sourcetree
+Added a new public repo in Github
+Cloned the repo in Sourcetree
+Added a new file in repo/project folder
+Committed and pushed to remote.
+Changed an existing file in local, committed and pushed to remote .
+Changed an existing file in remote, pulled it into local.
+Gave access to another dev in Github.
+
+Exercise: Create a project in Github, add some files to remote repo from Sourcetree, give access to 'nareninindia'
