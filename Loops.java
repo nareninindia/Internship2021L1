@@ -63,8 +63,8 @@ public class Loops{
         // do-while - execute {}; condition
 
         // Exercise: 1- Infinite loops using for, while, do-while
-        // Exercise: 2- Run the programs using while and do-while
-        // 26th, 27th Oct programs - Put them in your Github
+        // Exercise: 2- Run the programs using break and continue
+        // Exercise: 3- 26th, 27th Oct programs - Put them in your Github
 
         index = 1;
         while (index <= 100) {
