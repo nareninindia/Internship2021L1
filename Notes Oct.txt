@@ -1,3 +1,5 @@
+18th Oct 2021
+
 Repository or repo -> Store project files
 Github.com/bitbucket.com -> Project repos -> Store project files.
 
@@ -72,3 +74,36 @@ Clone - Create a new local repo based on an existing remote repo.
 Exercise - Github.com, Sourcetree tool in laptop
 
 -----
+19th Oct 2021
+
+Sourcetree
+Connecting Github account in Sourcetree
+Added a new public repo in Github
+Cloned the repo in Sourcetree
+Added a new file in repo/project folder
+Committed and pushed to remote.
+Changed an existing file in local, committed and pushed to remote .
+Changed an existing file in remote, pulled it into local.
+Gave access to another dev in Github.
+
+Exercise: Create a project in Github, add some files to remote repo from Sourcetree, give access to 'nareninindia'
+-----
+
+28th Oct 2021
+Class -> Template with properties
+Object -> Instance of class
+Constructor -> Way to initialize a class
+Default constructor
+Non-parameterized constructor
+Parameterized constructor
+Constructor overloading -> Multiple constructors for same class
+Methods
+
+Student s = new Student(); // default constructor, non-parameterized constructor
+Student s = new Student(1, "Rajesh", 3); // parameterized constructor
+
+Exercise:
+1. Complete all the earlier programs and put them in Github.
+2. Run the HelloWorld and Student programs from my repo in DrJava or Geany and send screenshots.
+3. Commit the code files to your Github project and send the Github links in Whatsapp group.
+4. While commiting code, do not commit .class files
