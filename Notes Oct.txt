@@ -107,3 +107,15 @@ Exercise:
 2. Run the HelloWorld and Student programs from my repo in DrJava or Geany and send screenshots.
 3. Commit the code files to your Github project and send the Github links in Whatsapp group.
 4. While commiting code, do not commit .class files
+
+Soumya -> Division for quotient
+Jahvani -> Multiplication
+Nikhil -> Sub
+Vinay - Division for remainder
+
+Exercise: 1st Nov 2021
+Create a Student class generate unique id like this
+<YearOfJoining><Course><RollNumber> if year after 2015
+<RollNumber><Course><YearOfJoining> if older than 2015
+if, else - 1
+Method overloading with 2 different method signatures - 2

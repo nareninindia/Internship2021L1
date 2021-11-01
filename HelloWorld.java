@@ -2,11 +2,11 @@ public class HelloWorld{
 
      public static void main(String []args){
         
-        int index = 1;
+        /*int index = 1;
         while (index <= 100) {
             System.out.println("Number 1: " + index);
             index++;
-        }
+        }*/
         Student s1 = new Student(1, "Rajesh", 3);
         Student s2 = new Student();
         System.out.println("Student s1: " + s1);
@@ -19,5 +19,24 @@ public class HelloWorld{
         // Garbage collection for s2
         
         System.out.println("Student s1 year: " + s1.getYear());
+        
+        System.out.println("Student s1 unique id: " + s1.getUniqueId());
+        
+        /**
+         * objectReference.methodName(Arguments)
+         * assigningVariable = objectReference.methodName(Arguments)
+         */
+        System.out.println("Student s1 add two numbers: " + s1.addTwoNumbers(2, 3));
+        
+        int addedNumber = s1.addTwoNumbers(200, 300);
+        System.out.println("Student s1 add two numbers: " + addedNumber);
+        
+        s1.generateUniqueId();
+        int p = s1.divideTwonumbers(10, 1);
+        int q = s1.multiplyNumbers(10, 0);
+        int r = s1.getremainder(10, 10);
+        int s = s1.subTwoNumbers(1, 100);
+        int t = s1.multiplyNumbers(10, 10, 10);
+        System.out.println("Output: " + p + ", " + q + ", " + r + ", " + s + ", " + t);
      }
 }
