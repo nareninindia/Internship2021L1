@@ -62,6 +62,5 @@ public class Student {
 	
 	public void multiplyNumbers(int x, int y, int z) {
 		int a = x * y * z;
-		return a;
 	}
 }

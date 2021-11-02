@@ -119,3 +119,7 @@ Create a Student class generate unique id like this
 <RollNumber><Course><YearOfJoining> if older than 2015
 if, else - 1
 Method overloading with 2 different method signatures - 2
+
+Naming conventions
+How to write comments
+Inheritance - Copy properties of one class into another class

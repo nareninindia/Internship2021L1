@@ -7,7 +7,7 @@ public class HelloWorld{
             System.out.println("Number 1: " + index);
             index++;
         }*/
-        Student s1 = new Student(1, "Rajesh", 3);
+        /* Student s1 = new Student(1, "Rajesh", 3);
         Student s2 = new Student();
         System.out.println("Student s1: " + s1);
         System.out.println("Student s2: " + s2);
@@ -26,7 +26,7 @@ public class HelloWorld{
          * objectReference.methodName(Arguments)
          * assigningVariable = objectReference.methodName(Arguments)
          */
-        System.out.println("Student s1 add two numbers: " + s1.addTwoNumbers(2, 3));
+        /*System.out.println("Student s1 add two numbers: " + s1.addTwoNumbers(2, 3));
         
         int addedNumber = s1.addTwoNumbers(200, 300);
         System.out.println("Student s1 add two numbers: " + addedNumber);
@@ -37,6 +37,9 @@ public class HelloWorld{
         int r = s1.getremainder(10, 10);
         int s = s1.subTwoNumbers(1, 100);
         int t = s1.multiplyNumbers(10, 10, 10);
-        System.out.println("Output: " + p + ", " + q + ", " + r + ", " + s + ", " + t);
+        System.out.println("Output: " + p + ", " + q + ", " + r + ", " + s + ", " + t);*/
+        
+        Car car = new Car(4, true, 5);
+        System.out.println("Wheels count: " + car.getWheelsCount());
      }
 }
