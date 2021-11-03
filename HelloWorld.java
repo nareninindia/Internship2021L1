@@ -39,7 +39,14 @@ public class HelloWorld{
         int t = s1.multiplyNumbers(10, 10, 10);
         System.out.println("Output: " + p + ", " + q + ", " + r + ", " + s + ", " + t);*/
         
-        Car car = new Car(4, true, 5);
+        Car car = new Car(4, true, 5, true, "Petrol", 1);
         System.out.println("Wheels count: " + car.getWheelsCount());
+        car.printFuelType();
+        car.printWheelsCount();
+        
+        Car car2 = new Car(4, true, 5, true, "Petrol");
+        System.out.println("Wheels count: " + car2.getWheelsCount());
+        car2.printFuelType();
+        car2.printWheelsCount();
      }
 }

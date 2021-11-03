@@ -3,6 +3,9 @@ public class Vehicle {
 	boolean hasStorage;
 	int numberOfPeople;
 	
+	public Vehicle() {
+	}
+	
 	public Vehicle(int wheelsCount, boolean hasStorage, int numberOfPeople) {
 		this.wheelsCount = wheelsCount;
 		this.hasStorage = hasStorage;
