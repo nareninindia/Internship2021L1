@@ -48,5 +48,6 @@ public class HelloWorld{
         System.out.println("Wheels count: " + car2.getWheelsCount());
         car2.printFuelType();
         car2.printWheelsCount();
+        car2.additionOfTwoNumbers(10, 20);
      }
 }

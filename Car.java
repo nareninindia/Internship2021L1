@@ -3,6 +3,7 @@ public class Car extends Vehicle {
 	String fuelType; // Petrol, Diesel, Electric
 	int wheelsCount;
 	
+	//accessModifier[optional] className(arguments[optional)
 	public Car(int wheelsCount, boolean hasStorage, int numberOfPeople, boolean hasSunfRoof, String fuelType, int extraWheelsCount) {
 		// Calling constructor of parent class using super
 		super(wheelsCount, hasStorage, numberOfPeople); // Access a constructor of parent class
@@ -33,10 +34,19 @@ public class Car extends Vehicle {
 		+ ", " + wheelsCount2 + ", " + wheelsCount3 + ", " + wheelsCount4);
 	}
 	
+	// accessModifier[optional] static[optional] final[optional] returnType methodName(arguments[optional])
 	// Method overriding - Parent class has method with same signature
 	public int getWheelsCount() {
+		// DEFAULT_WHEELS_COUNT = 5; cannot assign a value to final variable
+		wheelsCount = DEFAULT_WHEELS_COUNT;
+		additionOfTwoNumbers(2, 3);
 		return wheelsCount;
 	}
+	
+	// This method cannot be overridden, as the method in parent class is final
+	/*public int getNumberOfPeople() {
+		return numberOfPeople + 10;
+	}*/
 	
 	// super - Access parent class's constructors, variables, constants, methods
 	// this - Access own class's constructors, variables, constants, methods

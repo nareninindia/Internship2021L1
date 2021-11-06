@@ -123,3 +123,25 @@ Method overloading with 2 different method signatures - 2
 Naming conventions
 How to write comments
 Inheritance - Copy properties of one class into another class
+
+3rd Nov 2021
+Review inheritance
+Super
+This
+
+super - Access properties of parent class
+this - Access properties of current class
+
+5th Nov 2021
+Final keyword
+Access modifiers - public, private
+
+final - stop child classes from overriding a method, to declare of constant
+Access modifiers - public, private, protected, default
+public - to give complete open access to a class's property.
+private - to give access to a class's properties inside that class only.
+
+8th Nov 2021:
+Access modifiers - protected, default
+instanceOf keyword
+interface
