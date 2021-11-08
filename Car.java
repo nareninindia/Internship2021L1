@@ -52,4 +52,12 @@ public class Car extends Vehicle {
 	// this - Access own class's constructors, variables, constants, methods
 	
 	//12x+36y = 12(x+3y)
+	
+	public void subtractNumbers2(int a , int b) {
+		super.subtractNumbers(a, b);
+	}
+	
+	public void multiplyNumbers2(int a , int b) {
+		super.multiplyNumbers(a, b);
+	}
 }

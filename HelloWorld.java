@@ -49,5 +49,8 @@ public class HelloWorld{
         car2.printFuelType();
         car2.printWheelsCount();
         car2.additionOfTwoNumbers(10, 20);
+        car2.subtractNumbers2(10, 20);
+        car2.subtractNumbers(10, 20);
+        car2.multiplyNumbers(10, 20);
      }
 }

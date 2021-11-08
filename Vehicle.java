@@ -1,6 +1,6 @@
 public class Vehicle {
-	private final int DEFAULT_WHEELS_COUNT = 2;
-	private int wheelsCount;
+	public final int DEFAULT_WHEELS_COUNT = 2;
+	public int wheelsCount;
 	boolean hasStorage;
 	int numberOfPeople;
 	
@@ -33,5 +33,15 @@ public class Vehicle {
 	public void additionOfTwoNumbers(int a, int b) {
 		int c = a + b;
 		System.out.println("Added: " + c);
+	}
+	
+	protected void subtractNumbers(int a , int b) {
+		int c = a - b;
+		System.out.println("Subtracted: " + c);
+	}
+	
+	void multiplyNumbers(int a, int b) {
+		int c = a * b;
+		System.out.println("Multipled: " + c);
 	}
 }
