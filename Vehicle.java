@@ -1,5 +1,5 @@
-public class Vehicle {
-	public final int DEFAULT_WHEELS_COUNT = 2;
+public class Vehicle implements Machine {
+	
 	public int wheelsCount;
 	boolean hasStorage;
 	int numberOfPeople;
@@ -40,7 +40,7 @@ public class Vehicle {
 		System.out.println("Subtracted: " + c);
 	}
 	
-	void multiplyNumbers(int a, int b) {
+	public void multiplyNumbers(int a, int b) {
 		int c = a * b;
 		System.out.println("Multipled: " + c);
 	}

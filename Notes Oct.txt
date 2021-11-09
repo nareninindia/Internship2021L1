@@ -143,8 +143,6 @@ private - to give access to a class's properties inside that class only.
 
 8th Nov 2021:
 Access modifiers - protected, default
-instanceOf keyword
-interface
 
 Windows
 monitor.printW()
@@ -178,3 +176,15 @@ Login -> collect values from frontend - public -> login credentials match - priv
 
 protected - to give access to child classes only.
 default - to give access to child classes and in same package.
+
+9th November 2021:
+instanceof keyword
+interface
+
+instanceof -> we can identify the Class/Interface type in runtime
+We can declare parent type and assign an object of child class
+During compilation, the property identification happens from the declared type. (LHS)
+During running(runtime), the property running happens from the defined type. (RHS)
+
+interface -> define constants, declare variables or methods
+Child classes of interface should define the methods and variables declared in the interface.

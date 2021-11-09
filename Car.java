@@ -60,4 +60,9 @@ public class Car extends Vehicle {
 	public void multiplyNumbers2(int a , int b) {
 		super.multiplyNumbers(a, b);
 	}
+	
+	public void multiplyNumbers(int a , int b) {
+		System.out.println("Multiplying numbers: " + a + ", " + b);
+		super.multiplyNumbers(a, b);
+	}
 }

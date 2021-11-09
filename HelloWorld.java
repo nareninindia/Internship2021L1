@@ -52,5 +52,55 @@ public class HelloWorld{
         car2.subtractNumbers2(10, 20);
         car2.subtractNumbers(10, 20);
         car2.multiplyNumbers(10, 20);
+        
+        TataCar tataCar1 = new TataCar(4, true, 5, true, "Petrol", 1);
+        // TataCar extends Car extends Vehicle
+        boolean isTataCarType = tataCar1 instanceof TataCar;
+        boolean isCarType = tataCar1 instanceof Car;
+        boolean isVehicleType = tataCar1 instanceof Vehicle;
+        //boolean isBusType = tataCar1 instanceof Bus;
+        System.out.println("isTataCarType: " + isTataCarType);
+        System.out.println("isCarType: " + isCarType);
+        System.out.println("isVehicleType: " + isVehicleType);
+        //System.out.println("isBusType: " + isBusType);
+        
+        Vehicle tataCar2 = new TataCar(4, true, 5, true, "Petrol", 1);
+        // TataCar extends Car extends Vehicle
+        boolean isTataCarType2 = tataCar2 instanceof TataCar;
+        boolean isCarType2 = tataCar2 instanceof Car;
+        boolean isVehicleType2 = tataCar1 instanceof Vehicle;
+        boolean isBusType2 = tataCar2 instanceof Bus;
+        System.out.println("isTataCarType: " + isTataCarType2);
+        System.out.println("isCarType: " + isCarType2);
+        System.out.println("isVehicleType: " + isVehicleType2);
+        System.out.println("isBusType: " + isBusType2);
+        
+        Vehicle vehicle3 = new TataCar(4, true, 5, true, "Petrol", 1);
+        Vehicle vehicle4 = new Car(4, true, 5, true, "Petrol");
+        boolean isTataCarType3 = vehicle3 instanceof TataCar; // true
+        boolean isCarType3 = vehicle3 instanceof Car; // true
+        boolean isTataCarType4 = vehicle4 instanceof TataCar; // false
+        boolean isCarType4 = vehicle4 instanceof Car; // true
+        System.out.println("isTataCarType3: " + isTataCarType3);
+        System.out.println("isCarType3: " + isCarType3);
+        System.out.println("isTataCarType4: " + isTataCarType4);
+        System.out.println("isCarType4: " + isCarType4);
+        
+        vehicle3.multiplyNumbers(3, 4); 
+        vehicle4.multiplyNumbers(5, 6); // vehicle4 is of type Car, so it will run methods from Car class
+        // Identification of a method happens from referencing type(Vehicle), but running the methods happens from the actual object type(Car)
+        
+        Machine machine1 = new Vehicle();
+        Machine machine2 = new PrintingMachine();
+        boolean isMachineType1 = machine1 instanceof Machine; // true
+        boolean isVehicleType1 = machine1 instanceof Vehicle; // true
+        boolean isMachineType2 = machine2 instanceof Machine; // true
+        boolean isVehicleType_2 = machine2 instanceof Vehicle; // false
+        boolean isPrintineMachineType2 = machine2 instanceof PrintingMachine; // true
+        System.out.println("isMachineType1: " + isMachineType1);
+        System.out.println("isVehicleType1: " + isVehicleType1);
+        System.out.println("isMachineType2: " + isMachineType2);
+        System.out.println("isVehicleType_2: " + isVehicleType_2);
+        System.out.println("isPrintineMachineType2: " + isPrintineMachineType2);
      }
 }
