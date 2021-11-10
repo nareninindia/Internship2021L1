@@ -188,3 +188,67 @@ During running(runtime), the property running happens from the defined type. (RH
 
 interface -> define constants, declare variables or methods
 Child classes of interface should define the methods and variables declared in the interface.
+
+Exercise - 9th November 2021:
+0. Run the programs from today's class.
+1. Create a studentId generation method in Student class (Same as exercise from Nov 1st)
+<YearOfJoining><Course><RollNumber> if year after 2015
+<RollNumber><Course><YearOfJoining> if older than 2015
+2. Override the studentId generation method in CSEStudent class
+<Course><RollNumber><YearOfJoining>
+3. Declare a variable of type Student and assign an object of type CSEStudent to it.
+4. Generate studentId for Student created in point 3.
+5. Find whether Student(from point 3) is of type ECEStudent using instanceof keyword.
+6. Create an empty interface CollegeGoer and let Student class implement CollegeGoer(using implements keyword)
+
+OS -> Interface between user and machine.
+Windows desktop - CPU, monitor, keyboard, mouse, CD writer, camera
+Windows - Device drivers
+
+interface CDWriting {
+  void writeLine(String line); // declaring rules
+}
+
+class DellCDWriting implements CDWriting {
+  void writeLine(String line) {
+    // Using lasers to write onto the disc
+  }
+}
+
+Select mp3 file -> Write to CD
+CDWriting cdWriting = new DellCDWriting();
+for (;;) {
+  cdWriting.writeLine(...); // Using lasers to write onto the disc
+}
+mp3 file written on to the disc
+
+Interfaces define rule for child classes.
+
+interface Camera {
+  void takePhoto(); // rules
+  void applyBWFilter();
+}
+
+class DellCamera {
+  void takePhoto() {
+   // Open shutter, take light in and close shutter
+  }
+}
+
+Operating the camera using mouse. [mouse, monitor, CPU, camera]
+OS doesn't know which method to call.
+camera.takePhoto()
+
+Spring and Spring Boot -> Web applications/Advanced Java
+Spring Boot -> interfaces
+Devs -> implement Spring Boot related rules and then write code.
+Devs -> Framework - Declaring rules
+Other devs -> Implement our framework/rules
+
+Exercise 10th Nov 2021: // implements, extends, instanceof
+7. Declare a method for id generation in CollegeGoer interface.
+8. Implement this id generation method in Student class and all sub classes of student.
+9. Create a new class Faculty which implements CollegeGoer interface.
+10. Implement this id generation method in Faculty class.
+
+// implements, extends, instanceof

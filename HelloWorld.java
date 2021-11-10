@@ -75,7 +75,7 @@ public class HelloWorld{
         System.out.println("isVehicleType: " + isVehicleType2);
         System.out.println("isBusType: " + isBusType2);
         
-        Vehicle vehicle3 = new TataCar(4, true, 5, true, "Petrol", 1);
+        Vehicle vehicle3 = new TataCar(4, true, 5, true, "Petrol", 1); // vehicle3 is a TataCar, is a Car, is a Vehicle, is a Machine, is not a Bus
         Vehicle vehicle4 = new Car(4, true, 5, true, "Petrol");
         boolean isTataCarType3 = vehicle3 instanceof TataCar; // true
         boolean isCarType3 = vehicle3 instanceof Car; // true
@@ -102,5 +102,24 @@ public class HelloWorld{
         System.out.println("isMachineType2: " + isMachineType2);
         System.out.println("isVehicleType_2: " + isVehicleType_2);
         System.out.println("isPrintineMachineType2: " + isPrintineMachineType2);
+        
+        Machine machine3 = new PrintingMachine();
+        Machine machine4 = new Vehicle();
+        machine3.multiplyNumbers(3, 4); // 3 * 4 * 2 = 24
+        machine4.multiplyNumbers(3, 4); // 3 * 4 = 12
+        
+        System.out.println("machine3 type Machine: " + (machine3 instanceof Machine)); // true machine3 'is a' Machine
+        System.out.println("machine4 type Machine: " + (machine4 instanceof Machine)); // true machine4 'is a' Machine
+        System.out.println("machine3 type Vehicle: " + (machine3 instanceof Vehicle)); // false machine3 'is a' Vehcle - No
+        System.out.println("machine3 type Vehicle: " + (machine4 instanceof Vehicle)); // true machine4 'is a' Vehcle - Yes
+        System.out.println("machine3 type PrintingMachine: " + (machine3 instanceof PrintingMachine)); // true machine3 'is a' PrintingMachine - Yes
+        System.out.println("machine4 type PrintingMachine: " + (machine4 instanceof PrintingMachine)); // false machine4 'is a' PrintingMachine - No
+        
+        if (machine3 instanceof Vehicle) {
+			// Do some operation
+		} else if (machine3 instanceof PrintingMachine) {
+			// Do some other operation
+		}
+        
      }
 }
