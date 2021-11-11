@@ -90,6 +90,8 @@ public class HelloWorld{
         vehicle4.multiplyNumbers(5, 6); // vehicle4 is of type Car, so it will run methods from Car class
         // Identification of a method happens from referencing type(Vehicle), but running the methods happens from the actual object type(Car)
         
+        //Machine machine0 = new Machine(); // We can't create an object for an interface
+        //BigMachine machine0 = new BigMachine(); // We can't create an object for an abstract class
         Machine machine1 = new Vehicle();
         Machine machine2 = new PrintingMachine();
         boolean isMachineType1 = machine1 instanceof Machine; // true

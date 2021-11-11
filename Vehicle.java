@@ -1,4 +1,4 @@
-public class Vehicle implements Machine {
+public class Vehicle extends BigMachine { // Only one class or abstract class can be extended
 	
 	public int wheelsCount;
 	boolean hasStorage;
