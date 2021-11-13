@@ -334,3 +334,37 @@ Exercise 11th Nov 2021:
 3. Make CollegeGoer2 as an abstract class which implements Person interface
 4. Do not implement getName method in the abstract class CollegeGoer2. Show what happens and explain it.
 5. Take Student2 class and inherit CollegeGoer2. Do not implement getName method. Show what happens and explain it.
+
+12th Nov 2021:
+
+Java features:
+Object-oriented - All programmning is based on classes and objects.
+inheritance - Getting properties from a parent class into a child class.
+abstraction - Provide declartions without implementations. - using abstract classes and interfaces (in Java)
+encapsulation - should be able to hide inner working of a class - using all access modifiers public, private, protected and default (in Java)
+
+JVM - Java Virtual Machine (a specification for JRE)
+JRE - Java Runtime Environment (JRE is implementation of JVM)
+JDK - Java Development Kit
+
+Java Program -> Compile it -> .java gives .class in bytecode -> JRE can understand bytecode
+
+OS is a big box -> JRE/JVM is small box inside the OS box
+1. Any issues in the JRE/JVM will not affect the OS. They will be limited to the JRE.
+2. You can create multiple JRE/JVMs at once.
+3. Program execution is platform agnostic. (Linux, Mac OS, Windows)
+
+JDK:
+Enable writing java programs and compiling .java files to .class files
+
+LG TV (Java)
+To write the LG TV OS they need JDK
+LG TV needs just JRE to run and doesn't need JDK.
+
+inner class:
+public class Student {
+
+  public inner class CollegeGoer {
+
+  }
+}
