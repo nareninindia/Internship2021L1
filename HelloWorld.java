@@ -76,7 +76,7 @@ public class HelloWorld{
         System.out.println("isBusType: " + isBusType2);
         
         Vehicle vehicle3 = new TataCar(4, true, 5, true, "Petrol", 1); // vehicle3 is a TataCar, is a Car, is a Vehicle, is a Machine, is not a Bus
-        Vehicle vehicle4 = new Car(4, true, 5, true, "Petrol");
+        Vehicle vehicle4 = new Car(5, true, 5, true, "Petrol");
         boolean isTataCarType3 = vehicle3 instanceof TataCar; // true
         boolean isCarType3 = vehicle3 instanceof Car; // true
         boolean isTataCarType4 = vehicle4 instanceof TataCar; // false
@@ -122,6 +122,15 @@ public class HelloWorld{
 		} else if (machine3 instanceof PrintingMachine) {
 			// Do some other operation
 		}
-        
+		
+		Vehicle.divideNumbers(36, 3);
+		
+		System.out.println("Random variable: " + Vehicle.randomVariable);
+		Vehicle.randomVariable++;
+		System.out.println("Random variable incremented: " + Vehicle.randomVariable);
+        System.out.println("Vehicle3 randomVariable: " + vehicle3.randomVariable);
+        System.out.println("Vehicle4 randomVariable: " + vehicle4.randomVariable);
+        System.out.println("Vehicle3 wheelsCount: " + vehicle3.wheelsCount);
+        System.out.println("Vehicle4 wheelsCount: " + vehicle4.wheelsCount);
      }
 }

@@ -1,6 +1,12 @@
+/**
+ * Student class
+ */
 public class Student {
 	// Properties of a class - variables, constants, methods
     private int id;
+    /**
+     * Name of the student
+     */
     private String name;
     private int year;
     private String uniqueId;

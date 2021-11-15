@@ -7,5 +7,5 @@ public abstract class BigMachine implements Machine {
 	}
 	
 	// declared subtractNumbers method and did not define it - just like in an interface
-	public void subtractNumbers(int a, int b);
+	public abstract void subtractNumbers(int a, int b);
 }

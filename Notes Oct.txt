@@ -361,10 +361,61 @@ LG TV (Java)
 To write the LG TV OS they need JDK
 LG TV needs just JRE to run and doesn't need JDK.
 
-inner class:
+inner class: SHould be avoided
+Student.java
 public class Student {
 
   public inner class CollegeGoer {
 
   }
 }
+
+15th Nov 2021:
+Memory allocation
+Static
+Documentation through comments
+
+Memory allocation:
+class area, heap, stack, registers
+
+javac Student.java
+java Student.class
+
+All class files are loaded into JRE -> JRE verfies the class files -> Program runs
+Classes, methods -> Class area
+Objects -> Heap area [vehicle obj]
+Stack -> local variables [vehicle]
+Registers -> Memory mapping [vehicle <-> vehicleObj]
+
+Vehicle vehicle = new Vehicle();
+
+JRE -> search for the main method -> Run the main method
+
+Final:
+variable -> constant
+method -> cannot override
+class -> cannot inherit
+
+Static:
+method -> It will allow us to access a method directly using a class. Object is not required. - Avoided
+variable -> Can be accessed directly from class. - Avoided
+Objects will not have their own copies of static variables and static methods
+class -> Can be accessed directly from the class containing it.
+
+Student.java -> Student.class, Student.CollegeGoer.class
+public class Student {
+
+}
+
+public static class CollegeGoer {
+
+}
+
+Student.CollegeGoer collegeGoer = new Student.CollegeGoer();
+
+Java Exercise 15th Nov 2021:
+1. Create a public, static counter variable -> studentsCount, with initial value as 0, inside Student class
+2. Whenever a new student object is created, this counter should increment. Write the incrementation logic inside constructors.
+3. Write a HelloWorld class with a main method. Create a non-static variable in this class. Increment this variable inside the main method and print it.
+4. Create a String constant in CSEStudent and ECEStudent classes with name code. CSEStudent.CODE = "CSE", ECEStudent.CODE = "ECE" by following all the conventions we discussed.
+5. Install IntelliJ Java IDE - community edition

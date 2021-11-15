@@ -1,8 +1,10 @@
 public class Vehicle extends BigMachine { // Only one class or abstract class can be extended
 	
+	public static final int SOME_CONSTANT = 5;
 	public int wheelsCount;
 	boolean hasStorage;
 	int numberOfPeople;
+	public static int randomVariable = 4;
 	
 	public Vehicle() {
 		/*wheelsCount = DEFAULT_WHEELS_COUNT;
@@ -35,7 +37,7 @@ public class Vehicle extends BigMachine { // Only one class or abstract class ca
 		System.out.println("Added: " + c);
 	}
 	
-	protected void subtractNumbers(int a , int b) {
+	public void subtractNumbers(int a , int b) {
 		int c = a - b;
 		System.out.println("Subtracted: " + c);
 	}
@@ -43,5 +45,10 @@ public class Vehicle extends BigMachine { // Only one class or abstract class ca
 	public void multiplyNumbers(int a, int b) {
 		int c = a * b;
 		System.out.println("Multipled: " + c);
+	}
+	
+	public static void divideNumbers(int a, int b) {
+		int c = a/b;
+		System.out.println("Divided: " + c);
 	}
 }
