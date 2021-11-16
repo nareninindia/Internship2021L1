@@ -382,14 +382,17 @@ javac Student.java
 java Student.class
 
 All class files are loaded into JRE -> JRE verfies the class files -> Program runs
-Classes, methods -> Class area
-Objects -> Heap area [vehicle obj]
+Classes, methods -> Class area // HelloWorld.class, HelloWorld.main(...), Student.studentsCount -- Load the class
+Objects -> Heap area [vehicle obj] // h1 = new HelloWorld(), h1.nonStaticVariable, h1.xyz() {HelloWorld.main(...)} -- Run
 Stack -> local variables [vehicle]
 Registers -> Memory mapping [vehicle <-> vehicleObj]
 
 Vehicle vehicle = new Vehicle();
 
 JRE -> search for the main method -> Run the main method
+
+Static methods can access static properties only directly.
+Non-static methods can access static properties without any problem.
 
 Final:
 variable -> constant
