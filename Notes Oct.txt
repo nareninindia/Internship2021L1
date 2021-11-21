@@ -422,3 +422,9 @@ Java Exercise 15th Nov 2021:
 3. Write a HelloWorld class with a main method. Create a non-static variable in this class. Increment this variable inside the main method and print it.
 4. Create a String constant in CSEStudent and ECEStudent classes with name code. CSEStudent.CODE = "CSE", ECEStudent.CODE = "ECE" by following all the conventions we discussed.
 5. Install IntelliJ Java IDE - community edition
+
+
+Java Exercise 16th Nov 2021:
+1. Create a new method in Student class called runMainMethod().
+2. Call main(...) method of HelloWorld from inside this runMainMethod().
+3. main(...) method need a String array argument. Find how to create the String array and send it as argument.
