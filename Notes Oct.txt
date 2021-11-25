@@ -428,3 +428,36 @@ Java Exercise 16th Nov 2021:
 1. Create a new method in Student class called runMainMethod().
 2. Call main(...) method of HelloWorld from inside this runMainMethod().
 3. main(...) method need a String array argument. Find how to create the String array and send it as argument.
+
+25th November 2021:
+String class and String methods
+
+Java Exercise 25th November 2021:
+Common:
+  Create StringExercise class in IDE
+  Use equals and equalsIgnoreCase method
+Soumya: 1 example for each method below
+  startsWith
+  indexOf
+  length
+  replace
+  substring
+  toUpperCase
+Vinay: 1 example for each method below
+  endsWith
+  lastIndexOf
+  isEmpty
+  replaceAll
+  split
+  toLowerCase
+
+
+
+
+How to use external jars and libraries
+Collections - DS
+try, catch final - Exceptions
+Package
+---
+Unit testing
+Wrapper classes
