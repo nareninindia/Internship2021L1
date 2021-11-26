@@ -27,5 +27,10 @@ public class StringExercise {
         String s3 = "string s1";
         boolean isS1EqualsToIgnoreCaseS3 = s1.equalsIgnoreCase(s3);
         System.out.println("s1 equals s3: " + isS1EqualsToIgnoreCaseS3);
+        int[] intArray = {4, 5, 6};
+        String[] emptyStringArray = {};
+        int length = emptyStringArray.length;
+        StringExercise[] stringExercises = {new StringExercise(), new StringExercise()};
+        int numberAtIndex2 = intArray[2]; // Output is 6
     }
 }

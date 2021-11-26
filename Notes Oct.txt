@@ -451,13 +451,32 @@ Vinay: 1 example for each method below
   split
   toLowerCase
 
+Array: Items of similar data type
+[1, 2, 3]
+["S", "T", "R"]
+['C', 'H', 'A']
 
-
-
+Packages
 How to use external jars and libraries
 Collections - DS
 try, catch final - Exceptions
-Package
----
+Threads, Runnable, CompletableFutures, ThreadPoolExecutor
 Unit testing
 Wrapper classes
+
+26th November 2021:
+int[] intArray = {4, 5, 6};
+String[] emptyStringArray = {};
+int length = emptyStringArray.length; // Output is 0
+StringExercise[] stringExercises = {new StringExercise(), new StringExercise()};
+int numberAtIndex2 = intArray[2]; // Output is 6
+
+Java exercise - 26th November 2021:
+1. Run each other's code and read about all the available methods in String class through String documentation.
+2. Write code to combine multiple Strings: s1 = "Hello", s3 = "World", output = "Hello World"
+3. Intialize an array of Strings: ["HELLO", "WORLD"]. Write code to print each character of these Strings. Hint: Use 'nested for loop'
+Output:
+H
+E
+L
+... until D
