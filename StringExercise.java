@@ -1,3 +1,6 @@
+import numbermanipulations.NumberManipulator;
+import org.json.JSONObject;
+
 public class StringExercise {
     /**
      * Auto-completion
@@ -32,5 +35,22 @@ public class StringExercise {
         int length = emptyStringArray.length;
         StringExercise[] stringExercises = {new StringExercise(), new StringExercise()};
         int numberAtIndex2 = intArray[2]; // Output is 6
+
+        int x = 3;
+        int y = 4;
+        int z = 5;
+        NumberManipulator numberManipulator = new NumberManipulator();
+        int p = numberManipulator.addTwoNumbers(numberManipulator.addTwoNumbers(x, y), z);
+        System.out.println(p);
+
+        int q = numberManipulator.addTwoNumbers(x, y);
+        int r = numberManipulator.addTwoNumbers(q, z);
+        System.out.println(r);
+
+        //{ "name": "Rahul", "year": 3}
+        JSONObject j1 = new JSONObject();
+        j1.append("name", "Rahul");
+        j1.append("year", 3);
+        System.out.println(j1.toString());
     }
 }

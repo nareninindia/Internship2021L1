@@ -480,3 +480,34 @@ H
 E
 L
 ... until D
+
+27th November 2021:
+s3 = s1.concat(s2);
+s4 = s1 + s2;
+s5 = s1.concat(" ").concat(s2);
+s6 = s1 + " " + s2
+
+facebook:
+authentication
+newsfeed
+friendship
+apps
+
+Packages - Packages are folders in java to segregate files.
+How to debug? Put breakpoints. Click Debug option instead of Run option
+Adding an external jar:
+1. Find the jar file you want to add - org.json
+2. File -> Project structure -> libraries -> + -> java -> Select the downloaded jar
+3. Access the classes available in org.json - JSONObject, JSONObject.append, JSONObject.toString
+
+Java exercise 27th November 2021:
+1. Add org.json jar file to the project.
+2. Create a JSONObject for {"name": "Rahul", "year": 3, "college": "XYZ"}
+3. Using JSONObject methods print the value of key "name". Output should be "Rahul".
+4. Add StringUtils jar file to the project.
+5. Compare if value of key "name" and value of key "college" are same or not. Use equals method of StringUtils.
+
+org.json jar download
+https://repo1.maven.org/maven2/org/json/json/20210307/
+StringUtils jar download
+https://mvnrepository.com/artifact/org.apache.commons/commons-lang3/3.12.0
