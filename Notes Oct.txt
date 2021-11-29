@@ -549,3 +549,9 @@ Map -> HashMap, ConcurrentHashMap
 List -> Order is maintained
 Collection of elements
 {1, 2, 3}
+
+Java exercise 29th November 2021:
+1. Read List documentation (Search for java.util.List)
+2. Add 10 Strings to the stringList ArrayList object in ListExercise.addStringsToList
+3. Remove the String at 5th index.
+4. Print the String at 9th index.

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListExercise {
-    public void addNumbersToList() {
-        List list = new ArrayList<String>(10); // String is GENERIC here
+    public void addStringsToList() {
+        List stringList = new ArrayList<String>(10); // String is GENERIC here
     }
 }
