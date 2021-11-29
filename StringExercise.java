@@ -49,8 +49,9 @@ public class StringExercise {
 
         //{ "name": "Rahul", "year": 3}
         JSONObject j1 = new JSONObject();
-        j1.append("name", "Rahul");
-        j1.append("year", 3);
+        j1.put("name", "Rahul");
+        j1.put("year", 3);
+        j1.put("college", "xyz");
         System.out.println(j1.toString());
     }
 }
