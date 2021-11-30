@@ -1,3 +1,4 @@
+import numbermanipulations.ListExercise;
 import numbermanipulations.NumberManipulator;
 import org.json.JSONObject;
 
@@ -53,5 +54,7 @@ public class StringExercise {
         j1.put("year", 3);
         j1.put("college", "xyz");
         System.out.println(j1.toString());
+
+        ListExercise.addStringsToList();
     }
 }

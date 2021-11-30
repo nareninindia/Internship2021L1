@@ -552,6 +552,30 @@ Collection of elements
 
 Java exercise 29th November 2021:
 1. Read List documentation (Search for java.util.List)
-2. Add 10 Strings to the stringList ArrayList object in ListExercise.addStringsToList
+2. Add 10 Strings to the stringList ArrayList object in ListExercise.addStringsToList method
 3. Remove the String at 5th index.
 4. Print the String at 9th index.
+
+30th November 2021:
+Lists and ArrayLists details, LinkedList
+
+Lists:
+Order is maintained.
+Dynamically increase the size of the list.
+Dynamically decrease the size of the list.
+
+Steps:
+Initial capacity is 10
+Look for a space inside RAM/memory to fit 10 strings
+Going out of intial capacity
+Look for a space inside RAM/memory to fit 20 strings
+Capacity will be increased
+New elements are added
+Look for a space inside RAM/memory to fit 40 strings
+
+stringList[40] = "Forty" // capacity to 80
+stringList = new ArrayList(41]); // Look for a space 41 strings
+
+add and set
+subList
+toArray
