@@ -579,3 +579,56 @@ stringList = new ArrayList(41]); // Look for a space 41 strings
 add and set
 subList
 toArray
+
+6th December 2021:
+LinkedList
+
+Diff: LinkedList, ArrayList
+1.LL. Elements are stored and connected through addresses.
+1.AL. Elements are stored by indexes and one after the other.
+
+Disadvantages:
+1. LL memory usage is higher compared to AL
+2. Reading is more complex compared to AL - Time
+
+Advantages:
+1. Adding values and removing values from the list is easier compared to AL
+
+Reading is more - Go for AL
+Editing is more - Go for LL
+
+add, remove, subList
+
+addStringsToList:
+3
+5
+Six
+Second index:Five
+Five
+4
+Second index:Ten
+Eleven
+Second index:Five
+Second index:Five
+
+addStringsToLinkedList:
+3
+5
+Six
+Second index:Five
+Five
+4
+Second index:Ten
+Eleven
+Second index:Five
+Second index:Five
+
+Java exercise - 6th Dec 2021: Need to show on 8th December 2021
+1. Find what is a CSV file, if you don't know already.
+2. Download: Business financial data: June 2021 quarter – CSV from https://www.stats.govt.nz/large-datasets/csv-files-for-download/
+3. Read the data using OpenCSV library.
+OpenCSV.jar: https://mvnrepository.com/artifact/com.opencsv/opencsv/5.5.2
+Examples for reading from a CSV file example and storing it into a class: Search in Google.
+4. Create a data class to store data from the given CSV file.
+5. Load that data into an ArrayList and find the size of the ArrayList.
+6. Load that data into an LinkedList and find the size of the LinkedList.
