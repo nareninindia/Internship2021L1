@@ -590,6 +590,7 @@ Diff: LinkedList, ArrayList
 Disadvantages:
 1. LL memory usage is higher compared to AL
 2. Reading is more complex compared to AL - Time
+3. Reading based on index is also complex compared to AL. - Time
 
 Advantages:
 1. Adding values and removing values from the list is easier compared to AL
@@ -632,3 +633,23 @@ Examples for reading from a CSV file example and storing it into a class: Search
 4. Create a data class to store data from the given CSV file.
 5. Load that data into an ArrayList and find the size of the ArrayList.
 6. Load that data into an LinkedList and find the size of the LinkedList.
+
+8th December 2021:
+1. Unordered collection of data.
+2. It will not allow duplicates.
+
+L {1, 2, 5, 3, 6, 3}
+L[0] -> 1
+L[4] -> 6
+L -> {1, 2, 3, 6, 3}
+
+S {1, 2, 5, 3, 6}
+S[0] -> 1 -> Not possible
+S -> {2, 3, 6, 1, 5}
+S -> {3, 2, 6, 1, 5}
+
+Set -> Interface
+HashSet -> One type of set -> Class
+
+Java exercise - 8th Dec 2021
+1. How Java compares objects to be same or not?

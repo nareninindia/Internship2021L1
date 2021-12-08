@@ -55,9 +55,12 @@ public class StringExercise {
         j1.put("college", "xyz");
         System.out.println(j1.toString());
 
-        System.out.println("addStringsToList:");
+        /*System.out.println("addStringsToList:");
         ListExercise.addStringsToList();
         System.out.println("addStringsToLinkedList:");
-        ListExercise.addStringsToLinkedList();
+        ListExercise.addStringsToLinkedList();*/
+        System.out.println("addStringsToHashSet:");
+        ListExercise.addStringsToHashSet();
+        ListExercise.addVehiclesToHashSet();
     }
 }
