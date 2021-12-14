@@ -653,3 +653,25 @@ HashSet -> One type of set -> Class
 
 Java exercise - 8th Dec 2021
 1. How Java compares objects to be same or not?
+
+14th December 2021:
+equals and hashCode
+Map
+
+List - Ordered collection of items -> ArrayList, LinkedList
+Set - Unordered collection of items -> HashSet
+Iterator - Traverse through a collection
+
+Map, HashMap
+
+Map - Unordered collection of <key, value> pairs
+
+List -> A, B, C, D..
+List.get(1) -> B
+
+Map -> ("planet1", "Mercury"), ("planet2", "Venus"), ("planet3", "Earth")
+Map.get("planet1") -> "Mercury"
+Map.put("planet4", "Mars")
+Map -> ("planet1", "Mercury"), ("planet2", "Venus"), ("planet3", "Earth"), ("planet4", "Mars")
+Map.put("planet4", "Earth")
+Map -> ("planet1", "Mercury"), ("planet2", "Venus"), ("planet3", "Earth"), ("planet4", "Earth")

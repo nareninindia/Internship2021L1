@@ -130,14 +130,47 @@ public class ListExercise {
     }
 
     public static void addVehiclesToHashSet() {
-        Vehicle v1 = new Vehicle();
-        Vehicle v2 = new Vehicle();
-        Vehicle v3 = new Vehicle();
+        Vehicle v1 = new Vehicle(); // 0, false, 0
+        Vehicle v2 = new Vehicle(); // 0, false, 0
+        Vehicle v3 = new Vehicle(); // 0, false, 0
+        Vehicle v4 = v2;
 
         Set<Vehicle> set = new HashSet<>(3);
         set.add(v1);
         set.add(v2);
         set.add(v3);
-        System.out.println(set.size()); // 1 or 3?
+        set.add(v4);
+        System.out.println("Set size: " + set.size()); // 1 or 3 or 4? Ans: 3
+    }
+
+    /**
+     * If wheelsCount, hasStorage and numberOfPeople of two vehicles is same,
+     * then consider those 2 vehicles as same
+     */
+    public static void customComparison() {
+        Vehicle v1 = new Vehicle(4, true, 4);
+        Vehicle v2 = new Vehicle(4, true, 4);
+
+        System.out.println("Are v1 and v2 same objects?: " + (v1 == v2)); // false
+        System.out.println("v1 objectId: " + v1 + ", v2 objectId: " + v2); // same because objectId is using hashCode
+
+        System.out.println("Are v1 and v2 equal?: " + (v1.equals(v2))); // true - comparison is based on attributes of Vehicle class now
+    }
+
+    public static void addVehiclesToHashMap() {
+        Vehicle v1 = new Vehicle(0, false, 0);
+        Vehicle v2 = new Vehicle(1, false, 2);
+        Vehicle v3 = new Vehicle(1, true, 2);
+        Vehicle v4 = v2;
+        Vehicle v5 = new Vehicle(1, true, 2);
+
+        Map<String, Vehicle> vehiclesMap = new HashMap(5);
+        vehiclesMap.put("vehicle1", v1);
+        vehiclesMap.put("vehicle2", v2);
+        vehiclesMap.put("vehicle3", v3);
+        vehiclesMap.put("vehicle4", v4);
+        vehiclesMap.put("vehicle4", v5);
+        System.out.println("Map size: " + vehiclesMap.size());
+        System.out.println("Compare values in vehicle4 key: " + (v5 == vehiclesMap.get("vehicle4")));
     }
 }

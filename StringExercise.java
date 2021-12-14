@@ -62,5 +62,7 @@ public class StringExercise {
         System.out.println("addStringsToHashSet:");
         ListExercise.addStringsToHashSet();
         ListExercise.addVehiclesToHashSet();
+        ListExercise.customComparison();
+        ListExercise.addVehiclesToHashMap();
     }
 }
