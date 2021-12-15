@@ -680,3 +680,7 @@ Java exercise - 14th Dec 2021
 1. Create a Student class with attributes id(String), name(String) and age(int)
 2. Override equals and hashCode methods so that if 'id's of two Student objects are same, then those two students should be conisdered same.
 3. Practice the Map example shown in class.
+
+Java exercise - 15th Dec 2021:
+1. Create a map of planets like in previous class.
+2. Use 'Iterator' over map.keySet and print the values from the map.
