@@ -691,3 +691,9 @@ ConcurrentHashMap - Sync - Slower compared to LinkedHashMap or HashMap
 
 16th Exercise 2021:
 try, catch, final - Exceptions
+
+Java exercise - 16th Dec 2021
+1. Create a LinkedHashMap of Students - with id as key and Student as value.
+2. Print the values of the LinkedHashMap.
+3. Write a program to generate ArrayOutOfBoundsException.
+4. Put it in try catch block.
