@@ -173,4 +173,44 @@ public class ListExercise {
         System.out.println("Map size: " + vehiclesMap.size());
         System.out.println("Compare values in vehicle4 key: " + (v5 == vehiclesMap.get("vehicle4")));
     }
+
+    public static void addPlanetsToHashMap() {
+        Planet p1 = new Planet("Earth", 1);
+        Planet p2 = new Planet("Jupiter", 79);
+        Planet p3 = new Planet("Saturn", 82);
+        Planet p4 = new Planet("Mars", 2);
+        Planet p5 = new Planet("Uranus", 27);
+
+        Map<String, Planet> planetsMap = new HashMap(5);
+        planetsMap.put("Planet 1", p1);
+        planetsMap.put("Planet 2", p2);
+        planetsMap.put("Planet 3", p3);
+        planetsMap.put("Planet 4", p4);
+        planetsMap.put("Planet 5", p5);
+
+        System.out.println("Planet maps size is = " + planetsMap.size());
+
+        Set<String> keySet = planetsMap.keySet();
+        Iterator<String> itr1 = keySet.iterator();
+
+        while (itr1.hasNext()) {
+            String key = itr1.next();
+            Planet planet = planetsMap.get(key);
+            System.out.println(planet.getName());
+
+            //System.out.println(planetsMap.get(itr1.next()).getName());
+        }
+    }
+
+    public static void generateException() {
+        try {
+            int a = 100;
+            int b = 0;
+            int c = a/b;
+
+            System.out.println(c);
+        } catch (Exception e) {
+
+        }
+    }
 }

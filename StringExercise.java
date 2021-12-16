@@ -64,5 +64,7 @@ public class StringExercise {
         ListExercise.addVehiclesToHashSet();
         ListExercise.customComparison();
         ListExercise.addVehiclesToHashMap();
+        ListExercise.generateException();
+        ListExercise.addPlanetsToHashMap();
     }
 }

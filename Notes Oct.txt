@@ -684,3 +684,10 @@ Java exercise - 14th Dec 2021
 Java exercise - 15th Dec 2021:
 1. Create a map of planets like in previous class.
 2. Use 'Iterator' over map.keySet and print the values from the map.
+
+HashMap - UnSync - Unordered keys
+LinkedHashMap - UnSync - Ordered keys based on 'Linking' algorithm - Space and insertion time are higher compared to HashMap
+ConcurrentHashMap - Sync - Slower compared to LinkedHashMap or HashMap
+
+16th Exercise 2021:
+try, catch, final - Exceptions
