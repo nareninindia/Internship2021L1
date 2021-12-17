@@ -690,10 +690,43 @@ LinkedHashMap - UnSync - Ordered keys based on 'Linking' algorithm - Space and i
 ConcurrentHashMap - Sync - Slower compared to LinkedHashMap or HashMap
 
 16th Exercise 2021:
-try, catch, final - Exceptions
+try, catch, finally - Exceptions
 
 Java exercise - 16th Dec 2021
 1. Create a LinkedHashMap of Students - with id as key and Student as value.
 2. Print the values of the LinkedHashMap.
 3. Write a program to generate ArrayOutOfBoundsException.
 4. Put it in try catch block.
+
+17th Exercise 2021:
+try, catch, finally
+throws and throw
+Exceptions and Custom exceptions
+
+try-catch-finally -> Catch exceptions
+At least one catch block or one finally blockis required for a try block
+You can stack catch blocks or you can catch multiple exceptions from one catch block.
+Only one finally block can be written for a try block.
+finally block is guaranteed to be executed independent of catching an exception.
+Common things for finally block are closing a file connection or DB connection or releasing resources.
+
+throws -> Sending the responsibility of catching an exception to a higher function.
+
+throw -> Send/throw an exception
+
+FB friends -> 5000 friends
+5001th friend -> throw FriendLimitReachedException
+
+SBI -> Current price -> Rs.500
+Buy order -> Rs.10 -> throw NotAValidPriceException
+
+Java exercise - 17th Dec 2021
+1. Continue previous program. When ArrayOutOfBoundsException happens throw a CustomException and catch it.
+2. Create a singly linked list in Java - https://www.javatpoint.com/java-program-to-create-and-display-a-singly-linked-list
+3. Extends the keywords document with new topics and revise all the previous topics.
+4. Read about wrapper classes in Java.
+
+Next topics in Java:
+Wrapper classes
+Threads, Runnable, CompletableFutures, ThreadPoolExecutor
+Unit testing

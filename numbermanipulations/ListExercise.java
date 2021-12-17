@@ -202,15 +202,73 @@ public class ListExercise {
         }
     }
 
-    public static void generateException() {
+    public static void catchExceptionThrows() {
+        try {
+            generateExceptionThrows();
+        } catch (ArithmeticException e) {
+            // Log the exception
+            e.printStackTrace();
+            System.out.println("ArithmeticException happened");
+        }
+    }
+
+    public static void generateExceptionThrows() throws ArithmeticException {
+        int a = 100;
+        int b = 0;
+        int c = a / b;
+
+        System.out.println(c);
+    }
+
+    public static void catchExceptionThrow() {
+        try {
+            generateExceptionThrow();
+        } catch (OwnException e) {
+            e.printStackTrace();
+            e.printCustomMessage();
+            System.out.println("OwnException happened");
+        }
+    }
+
+    public static void generateExceptionThrow() throws OwnException {
         try {
             int a = 100;
             int b = 0;
-            int c = a/b;
+            int c = a / b;
 
             System.out.println(c);
-        } catch (Exception e) {
+        } catch (ArithmeticException e) {
+            // Log the exception
+            /*e.printStackTrace();
+            System.out.println("ArithmeticException happened");*/
+            throw new OwnException();
+        }
+    }
 
+    public static void generateException() {
+        // Open a file
+        // DB/DB cursor is opened
+        try {
+            // Reading from a file
+            // Reading from the DB/DB cursor
+            int a = 100;
+            int b = 0;
+            int c = a / b;
+
+            System.out.println(c);
+        } catch (ArithmeticException e) {
+            // Log the exception
+            e.printStackTrace();
+            System.out.println("ArithmeticException happened");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            e.printStackTrace();
+            System.out.println("ArrayIndexOutOfBoundsException happened");
+        } finally {
+            // Independent of exception handling finally block is guaranteed to be executed.
+            // Close the file
+            // Close the DB cursor or DB connection
+            // Release the resources
+            System.out.println("Exception happened");
         }
     }
 }
