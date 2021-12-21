@@ -777,3 +777,8 @@ MainThread {
 }
 
 Thread -> Deviate from the main thread execution
+
+Java exercise - 21st Dec 2021
+1. Write a program to parse this String into double: "21.000000"
+2. Create a thread to print numbers 1 to 100.
+3. Create another thread in above thread to print number 101 to 200. (Nested threads)
