@@ -68,5 +68,8 @@ public class StringExercise {
         ListExercise.catchExceptionThrows();
         ListExercise.catchExceptionThrow();
         ListExercise.addPlanetsToHashMap();
+        ListExercise.printNumbersOneToHundred();
+        ListExercise.printNumbers101To200();
+        ListExercise.printNumbers201To300();
     }
 }

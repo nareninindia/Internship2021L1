@@ -271,4 +271,34 @@ public class ListExercise {
             System.out.println("Exception happened");
         }
     }
+
+    public static void printNumbersOneToHundred() {
+        Thread t = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 0; i< 100; i++) {
+                    System.out.println(i+1);
+                }
+            }
+        });
+        t.start();
+    }
+
+    public static void printNumbers101To200() {
+        Thread t = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 100; i< 200; i++) {
+                    System.out.println(i+1);
+                }
+            }
+        });
+        t.start();
+    }
+
+    public static void printNumbers201To300() {
+        for (int i = 200; i< 300; i++) {
+            System.out.println(i+1);
+        }
+    }
 }

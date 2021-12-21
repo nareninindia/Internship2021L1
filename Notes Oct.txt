@@ -689,7 +689,7 @@ HashMap - UnSync - Unordered keys
 LinkedHashMap - UnSync - Ordered keys based on 'Linking' algorithm - Space and insertion time are higher compared to HashMap
 ConcurrentHashMap - Sync - Slower compared to LinkedHashMap or HashMap
 
-16th Exercise 2021:
+16th December 2021:
 try, catch, finally - Exceptions
 
 Java exercise - 16th Dec 2021
@@ -698,7 +698,7 @@ Java exercise - 16th Dec 2021
 3. Write a program to generate ArrayOutOfBoundsException.
 4. Put it in try catch block.
 
-17th Exercise 2021:
+17th December 2021:
 try, catch, finally
 throws and throw
 Exceptions and Custom exceptions
@@ -730,3 +730,50 @@ Next topics in Java:
 Wrapper classes
 Threads, Runnable, CompletableFutures, ThreadPoolExecutor
 Unit testing
+
+21st December 2021:
+Wrapper classes
+
+int -> Integer
+int a = 5 -> Integer b = new Integer(5)
+Integer b = new Integer("5");
+String s5 = "-5"; // "abc"
+int a = -5
+Integer b = new Integer(s5);
+int a = b.intValue();
+int a = Integer.parseInt(s5);
+
+int[][]
+List<Integer> aList = new ArrayList<Integer>(10);
+int a; // a=0
+Integer a; //a=null
+
+Advantages:
+1. Easy methods to convert numbers from String format to int primitive type.
+2. Helpful in collections framework.
+3. Helpful to hold a null as default instead of 0.
+
+int -> Integer
+long -> Long
+boolean -> Boolean
+double -> Double
+float -> Float
+-----
+
+Threads:
+Serial execution -> One after the another; one line after another line
+Parallel execution -> Run multiple methods at the same time.
+Main thread -> Main flow of program execution by the JVM
+
+addStringsToHashSet and addVehiclesToHashSet -> Run in parallel
+MainThread {
+  Thread {
+    addStringsToHashSet()
+  }
+  Thread {
+    addVehiclesToHashSet()
+  }
+  customComparison()
+}
+
+Thread -> Deviate from the main thread execution
