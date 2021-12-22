@@ -2,6 +2,9 @@ import numbermanipulations.ListExercise;
 import numbermanipulations.NumberManipulator;
 import org.json.JSONObject;
 
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
+
 public class StringExercise {
     /**
      * Auto-completion
@@ -71,5 +74,23 @@ public class StringExercise {
         ListExercise.printNumbersOneToHundred();
         ListExercise.printNumbers101To200();
         ListExercise.printNumbers201To300();
+
+        threadPoolSample();
+    }
+
+    private static void threadPoolSample() {
+        ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(4); // 3, 100
+        // core pool size = 3
+        // 3 threads run at the same and 97 threads will wait in the queue
+        // 2 threads running and 1 completed.
+        // 3 threads run and 96 threads will wait in queue
+        // 0 threads running and 0 threads in the queue
+        executor.execute(ListExercise.printNumbersOneToHundredRunnable());
+        executor.execute(ListExercise.printNumbersOneToHundredRunnable());
+        executor.execute(ListExercise.printNumbersOneToHundredRunnable());
+        executor.execute(ListExercise.printNumbersOneToHundredRunnable());
+        executor.execute(ListExercise.printNumbersOneToHundredRunnable());
+        executor.execute(ListExercise.printNumbersOneToHundredRunnable()); // +94 times
+        executor.shutdown();
     }
 }

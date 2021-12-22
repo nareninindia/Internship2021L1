@@ -729,6 +729,7 @@ Java exercise - 17th Dec 2021
 Next topics in Java:
 Wrapper classes
 Threads, Runnable, CompletableFutures, ThreadPoolExecutor
+Typecast
 Unit testing
 
 21st December 2021:
@@ -761,8 +762,8 @@ float -> Float
 -----
 
 Threads:
-Serial execution -> One after the another; one line after another line
-Parallel execution -> Run multiple methods at the same time.
+Serial execution/Synchronous -> One after the another; one line after another line
+Parallel execution/Unsynchronous -> Run multiple methods at the same time.
 Main thread -> Main flow of program execution by the JVM
 
 addStringsToHashSet and addVehiclesToHashSet -> Run in parallel
@@ -782,3 +783,22 @@ Java exercise - 21st Dec 2021
 1. Write a program to parse this String into double: "21.000000"
 2. Create a thread to print numbers 1 to 100.
 3. Create another thread in above thread to print number 101 to 200. (Nested threads)
+
+22nd December 2021:
+ThreadPoolExecutor
+CompletableFutures
+
+Thread vs Runnable:
+Thread - It is a class. Thread needs a runnable for writing program execution.
+Runnable - It is interface. Runnable needs any one way creating a thread mechanism.
+CompletableFuture - It is a class.
+
+ThreadPoolExecutor:
+Execute multiple threads at the same time with a core thread pool size.
+It will help us to not overload the processor with hundreds of threads and crash the system.
+
+Java exercise - 22nd Dec 2021
+1. Create 10 runnables for printing numbers: 1-100, 101-200, 201-300..., 901 to 1000.
+2. Create a thread pool of core pool size as 1 and execute the runnables.
+3. Create a thread pool of core pool size as 3 and execute the runnables.
+Need to show the effect of #2 and #3 in class.

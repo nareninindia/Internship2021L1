@@ -284,6 +284,17 @@ public class ListExercise {
         t.start();
     }
 
+    public static Runnable printNumbersOneToHundredRunnable() {
+        return new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 0; i< 100; i++) {
+                    System.out.println(i+1);
+                }
+            }
+        };
+    }
+
     public static void printNumbers101To200() {
         Thread t = new Thread(new Runnable() {
             @Override
@@ -291,6 +302,22 @@ public class ListExercise {
                 for (int i = 100; i< 200; i++) {
                     System.out.println(i+1);
                 }
+                // Nesting another thread
+                printNumbers201To300InThread();
+            }
+        });
+        t.start();
+    }
+
+    public static void printNumbers201To300InThread() {
+        Thread t = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 100; i< 200; i++) {
+                    System.out.println(i+1);
+                }
+                // Nesting another thread
+                printNumbersOneToHundred();
             }
         });
         t.start();
