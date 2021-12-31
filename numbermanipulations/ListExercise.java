@@ -1,6 +1,10 @@
 package numbermanipulations;
 
 import java.util.*;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class ListExercise {
     public static void addStringsToList() {
@@ -321,11 +325,61 @@ public class ListExercise {
             }
         });
         t.start();
+        // t1 -> {t2 -> { t3}
     }
 
     public static void printNumbers201To300() {
         for (int i = 200; i< 300; i++) {
             System.out.println(i+1);
         }
+    }
+
+    public static void typeCasting() {
+        List<String> strings = new ArrayList<>();
+        strings.add("String1");
+        consumeArrayList((ArrayList<String>) strings);
+        int i = (int) 1.50;
+        System.out.println(i);
+    }
+
+    public static void consumeArrayList(ArrayList<String> arrayList) {
+        for (String s: arrayList) {
+            System.out.println(s);
+        }
+    }
+
+    public static void completableFutureExample() {
+        CompletableFuture<Integer> integerCompletableFuture = CompletableFuture.supplyAsync(new Supplier<Integer>() {
+            @Override
+            public Integer get() {
+                int total = 0;
+                for (int i = 100; i < 200; i++) {
+                    System.out.println(i + 1);
+                    total = total + i;
+                }
+                return total;
+            }
+        }).thenApplyAsync(new Function<Integer, Integer>() {
+            @Override
+            public Integer apply(Integer total) {
+                printValue(total);
+                return total;
+            }
+        }).thenApplyAsync(new Function<Integer, Integer>() {
+            @Override
+            public Integer apply(Integer total) {
+                printValue(total);
+                return total;
+            }
+        });
+        try {
+            integerCompletableFuture.get();
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void printValue(int total) {
+        System.out.println("Total is: " + total);
     }
 }

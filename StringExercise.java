@@ -63,7 +63,7 @@ public class StringExercise {
         System.out.println("addStringsToLinkedList:");
         ListExercise.addStringsToLinkedList();*/
         System.out.println("addStringsToHashSet:");
-        ListExercise.addStringsToHashSet();
+        /*ListExercise.addStringsToHashSet();
         ListExercise.addVehiclesToHashSet();
         ListExercise.customComparison();
         ListExercise.addVehiclesToHashMap();
@@ -73,9 +73,11 @@ public class StringExercise {
         ListExercise.addPlanetsToHashMap();
         ListExercise.printNumbersOneToHundred();
         ListExercise.printNumbers101To200();
-        ListExercise.printNumbers201To300();
+        ListExercise.printNumbers201To300();*/
+        ListExercise.completableFutureExample();
+        ListExercise.typeCasting();
 
-        threadPoolSample();
+        //threadPoolSample();
     }
 
     private static void threadPoolSample() {

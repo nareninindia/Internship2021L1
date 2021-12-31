@@ -802,3 +802,7 @@ Java exercise - 22nd Dec 2021
 2. Create a thread pool of core pool size as 1 and execute the runnables.
 3. Create a thread pool of core pool size as 3 and execute the runnables.
 Need to show the effect of #2 and #3 in class.
+
+31st October 2021:
+CompletableFutures
+Typecasting
