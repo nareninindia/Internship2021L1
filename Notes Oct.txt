@@ -806,3 +806,61 @@ Need to show the effect of #2 and #3 in class.
 31st October 2021:
 CompletableFutures
 Typecasting
+
+Thread t = new Thread(new Runnable() {
+  public void run() {
+    double totalBill = 0;
+    for(allItems) {
+      totalBill = totalBill + allItems[index].bill;
+    }
+    // totalBill is available now
+  }
+})
+
+Java exercise - 31st Dec 2021
+1. Stack the printing of numbers 1-100, 101-200,... 901-1000 using thenApplyAsync method of completableFutures.
+2. Typecast LinkedList to ArrayList and show the result.
+
+Generics - Future
+enum - Give it as exercise
+lambda expressions, functional interface, method references
+
+3rd Jan 2022:
+Manual testing.
+Testing team or QA team
+Test cases:
+1. Pass valid integers.
+2. Pass double. - Failed
+3. Pass chars.
+
+Automated testing.
+Test cases:
+1. Pass valid integers. 2, 3
+2. Pass double - 2.3 and 3.4
+3. Pass chars. - 'c' and 'b'
+
+Code the test cases
+
+4th Jan 2022:
+Blackbox testing:
+Not aware of what's inside the code.
+
+Whitebox testing:
+Fully aware of what's inside the code.
+----
+Unit testing:
+Individual piece of code or individual functionality.
+
+Integration testing:
+If we write for the whole functionality.
+Spring - We write integration tests at API level.
+
+DB:
+Postgres
+
+Spring - Spring boot:
+Integration tests
+Mostly selflearning
+
+Marketing module:
+A lot of units tests and integration test

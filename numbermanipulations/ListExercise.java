@@ -348,21 +348,18 @@ public class ListExercise {
         }
     }
 
+    // 100 to 999
     public static void completableFutureExample() {
         CompletableFuture<Integer> integerCompletableFuture = CompletableFuture.supplyAsync(new Supplier<Integer>() {
             @Override
             public Integer get() {
-                int total = 0;
-                for (int i = 100; i < 200; i++) {
-                    System.out.println(i + 1);
-                    total = total + i;
-                }
+                int total = printNumbersForCF1();
                 return total;
             }
         }).thenApplyAsync(new Function<Integer, Integer>() {
             @Override
             public Integer apply(Integer total) {
-                printValue(total);
+                total = printNumbersForCF2(total);
                 return total;
             }
         }).thenApplyAsync(new Function<Integer, Integer>() {
@@ -379,7 +376,51 @@ public class ListExercise {
         }
     }
 
+    private static int printNumbersForCF1() {
+        int total = 0;
+        for (int i = 100; i < 200; i++) {
+            System.out.println(i + 1);
+            total = total + i;
+        }
+        return total;
+    }
+
+    private static int printNumbersForCF2(int total) {
+        for (int i = 200; i < 300; i++) {
+            System.out.println(i + 1);
+            total = total + i;
+        }
+        return total;
+    }
+
     public static void printValue(int total) {
         System.out.println("Total is: " + total);
+    }
+
+    public static void typeCastIntegerToDouble() {
+        int a = 6;
+        double b = a; // auto-boxing | int -> double | float -> double | int -> float
+        System.out.println(b); // 6.0
+    }
+
+    public static void typeCastDoubleToInteger() {
+        double a = 6.5;
+        int b = (int) a;
+        System.out.println(b); // 6
+    }
+
+    public static void castMachines() {
+        //Vehicle vehicle1 = new Vehicle();
+        Machine m1 = new Vehicle();
+        acceptVehicle((Vehicle) m1);
+    }
+
+    public static void acceptVehicle(Vehicle v) {
+        v.multiplyNumbers(2, 3);
+    }
+
+    public static void castLinkedListToArrayList() {
+        List<String> list = new LinkedList<>();
+        ArrayList<String> arrayList = (ArrayList<String>) list;
     }
 }

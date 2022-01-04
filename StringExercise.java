@@ -75,7 +75,10 @@ public class StringExercise {
         ListExercise.printNumbers101To200();
         ListExercise.printNumbers201To300();*/
         ListExercise.completableFutureExample();
-        ListExercise.typeCasting();
+        ListExercise.typeCastIntegerToDouble();
+        ListExercise.typeCastDoubleToInteger();
+        ListExercise.castMachines();
+        //ListExercise.castLinkedListToArrayList(); Gives ClassCastException
 
         //threadPoolSample();
     }

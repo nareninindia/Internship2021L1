@@ -2,7 +2,7 @@ package numbermanipulations;
 
 import java.util.Objects;
 
-public class Vehicle { // Only one class or abstract class can be extended
+public class Vehicle extends Machine{ // Only one class or abstract class can be extended
 	
 	public static final int SOME_CONSTANT = 5;
 	public int wheelsCount;
@@ -36,14 +36,16 @@ public class Vehicle { // Only one class or abstract class can be extended
 		return numberOfPeople;
 	}
 	
-	public void additionOfTwoNumbers(int a, int b) {
+	public int additionOfTwoNumbers(int a, int b) {
 		int c = a + b;
 		System.out.println("Added: " + c);
+		return c;
 	}
 	
-	public void subtractNumbers(int a , int b) {
+	public int subtractNumbers(int a , int b) {
 		int c = a - b;
 		System.out.println("Subtracted: " + c);
+		return c;
 	}
 	
 	public void multiplyNumbers(int a, int b) {
@@ -51,7 +53,7 @@ public class Vehicle { // Only one class or abstract class can be extended
 		System.out.println("Multipled: " + c);
 	}
 	
-	public static void divideNumbers(int a, int b) {
+	public void divideNumbers(int a, int b) {
 		int c = a/b;
 		System.out.println("Divided: " + c);
 	}
