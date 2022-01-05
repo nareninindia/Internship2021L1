@@ -862,5 +862,102 @@ Spring - Spring boot:
 Integration tests
 Mostly selflearning
 
-Marketing module:
-A lot of units tests and integration test
+Marketing module
+A lot of units tests and integration tests
+
+Java exercise - 4th Jan 2022:
+Write unit tests for multiplication and division methods of Machine class.
+
+5th Jan 2022:
+Student -> id(int), name(String)
+select * from Student
+select id from Student
+
+Delete from Student
+Drop table Student
+Create table Student (
+  id number PRIMARY KEY,
+  name varchar(200)
+)
+Alter table Student (
+  ADD COLUMN name varchar(200)
+)
+
+select * from Student where name = 'Arun'
+Arun -> Arun Vijay
+update Student set name = 'Arun Vijay' where name = 'Arun'
+delete from Student where name = 'Arun'
+insert into Student (id, name) values (1, 'Arun')
+
+Table - creation(CREATE), changes(ALTER), removing(DROP)
+Table records - INSERT, SELECT, UPDATE, DELETE
+
+Constraints:
+NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY
+
+NOT NULL:
+Create table Student (
+  id number PRIMARY KEY,
+  name varchar(200) NOT NULL
+)
+
+ALTER table Student (
+  ADD CONSTRAINT name NOT NULL
+)
+
+UNIQUE:
+Create table Student (
+  id number PRIMARY KEY,
+  name varchar(200) UNIQUE NOT NULL
+)
+
+ALTER table Student (
+  ADD CONSTRAINT name UNIQUE
+)
+
+PRIMARY KEY:
+Create table Student (
+  id number PRIMARY KEY,
+  name varchar(200) UNIQUE NOT NULL
+)
+
+ALTER table Student (
+  ADD CONSTRAINT id PRIMARY KEY
+)
+
+Single column
+Multi column
+
+Student: Single column
+1, Arun
+2, Arun
+2, Vijay - Not accepted
+
+Student: Multi column primary key
+1, Arun
+2, Arun
+2, Vijay - Accepted
+
+-----
+Department: id int primary key, name varchar(100) unique
+Student: id int primary, name varchar(100) not null, departmentId int not null
+departmentId -> foreign key referencing Department table
+
+Department:
+1, ECE
+2, CSE
+
+Student:
+1, Arun, 1
+2, Vijay, 2
+3, Ajith, 3 - Not accepted
+
+Reasons for foriegn keys:
+1. Our data should be clean
+2. Automatic indexes
+
+* Referencing column should be a primary key
+
+Normalisation: Self learning
+
+Distinct: Selecting distinct values
