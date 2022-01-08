@@ -948,9 +948,11 @@ Department:
 2, CSE
 
 Student:
-1, Arun, 1
-2, Vijay, 2
-3, Ajith, 3 - Not accepted
+1, Arun, ECE, 1
+2, Vijay, CSE, 2
+3, Ajith, CSE, 3
+4, ajith, CSE, 3
+5, Sujith, Mech, 3
 
 Reasons for foriegn keys:
 1. Our data should be clean
@@ -961,3 +963,74 @@ Reasons for foriegn keys:
 Normalisation: Self learning
 
 Distinct: Selecting distinct values
+
+select * from Student where branch='CSE' - More efficient than NOT condition
+select * from Student where NOT branch='ECE'
+
+Order By
+select * from Student order by name (ascending order)
+select * from Student order by name ASC (ascending order)
+4, ajith, CSE
+3, Ajith, CSE
+1, Arun, ECE
+2, Vijay, CSE
+
+select * from Student order by name DESC (descending order)
+select * from Student ORDER BY name, branch ASC
+
+Student -> id(int), name(varchar), branch(varchar)
+1, A, ECE
+2, Vijayghfgjbjsjjgj, [NULL]
+3, Ajith, [NULL]
+
+indexes/unique - some RDMS will not accept if a column accepts NULL
+
+select * from Student where branch IS NULL (2nd, 3rd records)
+select * from Student where branch IS NOT NULL (1st record)
+
+LIMIT: Postgres
+select * from Student LIMIT 2;
+1, Arun, ECE, 1
+2, Vijay, CSE, 2
+
+select * from Student where name='Vijay' LIMIT 2;
+2, Vijay, CSE, 2
+
+SKIP: Postgres
+select * from Student limit 2 skip 2;
+select * from Student skip 2;
+
+Pagination:
+1,00,000 students
+select * from Student (1,00,000 records)
+Query execution is slow
+RAM should hold 1,00,000. This will slow other apps
+Not possible to read all 1L records at once.
+
+20 students - 1st page
+20 students - 2nd page
+...
+
+Gmail - Click to move to a different page
+Facebook - As you scroll new pages will be loaded
+
+select * from Student limit 20 skip 0 (Page 1)
+select * from Student limit 20 skip 20 (Page 2)
+select * from Student limit 20 skip 40 (Page 3)
+....
+select * from Student limit 20 skip 99,980 (Last page)
+
+pageNumber = 1;
+limit = 20; // also call pageSize
+skip = (pageNumber - 1) * limit;
+totalNumberOfPages = count/pageSize // 5000 pages
+
+LIKE:
+select * from Student where name LIKE '%jith' // Ajith, ajith, Sujith
+select * from Student where name LIKE 'A%' // Arun, Ajith
+select * from Student where name LIKE '%ji%' // Ajith, ajith, Sujith
+select * from Student where name LIKE 'A%h' // Ajith
+
+IN:
+select * from Student where branch = 'ECE' OR branch = 'Mech' OR ....
+select * from Student where branch IN ('ECE','Mech', ....)
