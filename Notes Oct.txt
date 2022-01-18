@@ -1034,3 +1034,157 @@ select * from Student where name LIKE 'A%h' // Ajith
 IN:
 select * from Student where branch = 'ECE' OR branch = 'Mech' OR ....
 select * from Student where branch IN ('ECE','Mech', ....)
+
+
+HOD: (id, name)
+1. Karthik
+2. Manoj
+
+Department: (id, name, hodId)
+1, ECE, 1
+2, CSE, 1
+3, Mech, 2
+
+Student: (id, name, departmentId)
+1, Arun, 1
+2, Vijay, 1
+3, Ajith, 2
+4, Ramesh
+
+All Students:
+Select * from Student | select id, name, departmentId from Student
+
+All Departments:
+Select * from Department | select id, name from Department
+
+List of all students along with their department:
+INNER JOIN [JOIN]
+select * from Student s JOIN Department d ON s.departmentId = d.id
+select * from Student AS s JOIN Department as d ON s.departmentId = d.id
+select * from Student JOIN Department ON Student.departmentId = Department.id
+select * from Student s INNER JOIN Department d ON s.departmentId = d.id
+select * from Student AS s INNER JOIN Department as d ON s.departmentId = d.id
+select * from Student INNER JOIN Department ON Student.departmentId = Department.id
+
+1, Arun, 1, 1, ECE
+2, Vijay, 1, 1, ECE
+3, Ajith, 2, 2, CSE
+
+select s.id, s.name, d.name from Student s JOIN Department d ON s.departmentId = d.id
+1, Arun, ECE
+2, Vijay, ECE
+3, Ajith, CSE
+
+LEFT JOIN (LEFT OUTER JOIN)
+select * from Student s LEFT JOIN Department d ON s.departmentId = d.id
+1, Arun, 1, 1, ECE
+2, Vijay, 1, 1, ECE
+3, Ajith, 2, 2, CSE
+4, Ramesh, , ,
+
+RIGHT JOIN (RIGHT OUTER JOIN)
+select * from Student s RIGHT JOIN Department d ON s.departmentId = d.id
+1, Arun, 1, 1, ECE
+2, Vijay, 1, 1, ECE
+3, Ajith, 2, 2, CSE
+ ,      ,  , 3, Mech
+
+OUTER JOIN (FULL OUTER JOIN)
+select * from Student s OUTER JOIN Department d ON s.departmentId = d.id
+1, Arun, 1, 1, ECE
+2, Vijay, 1, 1, ECE
+3, Ajith, 2, 2, CSE
+4, Ramesh, , ,
+,      ,  , 3, Mech
+
+Select all Students with their depatmentName and hodName of that department
+select s.id, s.name, d.name, h.name from Student s
+JOIN Department d ON s.departmentId = d.id
+JOIN HOD h ON d.hodId = h.id
+
+1, Arun, ECE, Karthik
+2, Vijay, ECE, Karthik
+3, Ajith, CSE, Manoj
+
+Select all Students with their depatmentName and hodName of that department where hod name is Karthik
+select s.id, s.name, d.name, h.name from Student s
+JOIN Department d ON s.departmentId = d.id
+JOIN HOD h ON d.hodId = h.id
+WHERE h.name = 'Karthik'
+
+1, Arun, ECE, Karthik
+2, Vijay, ECE, Karthik
+
+Select all Students with their depatmentName and hodName of that department where hod name is Karthik
+select s.id, s.name, d.name, h.name from Student s
+JOIN Department d ON s.departmentId = d.id
+JOIN HOD h ON d.hodId = h.id and h.name = 'Karthik' [More efficient query]
+
+1, Arun, ECE, Karthik
+2, Vijay, ECE, Karthik
+
+Select all Students with their depatmentName and hodName of that department where hod name is Karthik
+select s.id, s.name, d.name, h.name from Student s
+JOIN Department d ON s.departmentId = d.id
+JOIN HOD h ON d.hodId = h.id
+WHERE s.name = 'Arun'
+
+1, Arun, ECE, Karthik
+
+18th Jan 2022:
+Relational DB and NoSQL
+Foriegn keys: RDBMS
+
+RDBMS: No redundancy
+NoSQL: Redundancy
+
+NoSQL -> Write could be slower, reading is very fast compared to RDMS.
+RDBMS -> Data is well structured. Writes could be faster than NoSQL. Reads are comparitively slower.
+
+Postgres -> Relational
+
+----- Relational ----- MySQL, SQL server(MS SQL), Postgresql
+HOD: (id, name)
+1. KarthikS
+2. Manoj
+
+Department: (id, name, hodId)
+1, ECE, 1
+2, CSE, 1
+3, Mech, 2
+
+Student: (id, name, departmentId)
+1, Arun, 1
+2, Vijay, 1
+3, Ajith, 2
+4, Ramesh
+
+----- Non-relational/NoSQL Redundancy ----- mongodb
+HOD: (id, name)
+1. KarthikS
+2. Manoj
+
+Department: (id, name, hodId, hodName)
+1, ECE, 1, KarthikS
+2, CSE, 1, KarthikS
+3, Mech, 2, Manoj
+
+Student: (id, name, departmentId, departmentName)
+1, Arun, 1, ECE
+2, Vijay, 1, ECE
+3, Ajith, 2, CSE
+4, Ramesh
+
+Student: (id, name, departmentId, departmentName, hodId, hodName)
+1, Arun, 1, ECE, 1, KarthikS
+2, Vijay, 1, ECE, 1, KarthikS
+3, Ajith, 2, CSE, 1, KarthikS
+4, Ramesh
+
+18th Jan 2022 - Exercise:
+1. Write a query to print all students in ascending order of names.
+2. Write a query to print last 2 students.
+3. Write a query to print student name and his/her department name. If department name is not available, then null should get printed.
+4. Write a query to print student name and his/her hod name. If hod name is not available, then null should get printed.
+5. Write a query to print all department names which end with 'E' (capital E)
+6. Write a query to print all department names which have 'E' or 'e' in their name.
