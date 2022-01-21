@@ -1188,3 +1188,9 @@ Student: (id, name, departmentId, departmentName, hodId, hodName)
 4. Write a query to print student name and his/her hod name. If hod name is not available, then null should get printed.
 5. Write a query to print all department names which end with 'E' (capital E)
 6. Write a query to print all department names which have 'E' or 'e' in their name.
+
+21st Jan 2022 - Exercise
+1. ER diagram for College database in Lucidchart or any other tool.
+2. Practice the JDBC connection and create classes for Student, Department and HOD. Store the resultSets in the objects.
+3. Create projection classes and store data in them.
+4. Practice #2 and #3 on all 6 queries. 
