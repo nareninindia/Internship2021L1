@@ -1189,8 +1189,67 @@ Student: (id, name, departmentId, departmentName, hodId, hodName)
 5. Write a query to print all department names which end with 'E' (capital E)
 6. Write a query to print all department names which have 'E' or 'e' in their name.
 
-21st Jan 2022 - Exercise
+21st Jan 2022:
+Queries practice.
+JDBC connection.
+Storing resultSet in a class.
+
+Java 21st Jan 2022 - Exercise
 1. ER diagram for College database in Lucidchart or any other tool.
 2. Practice the JDBC connection and create classes for Student, Department and HOD. Store the resultSets in the objects.
 3. Create projection classes and store data in them.
-4. Practice #2 and #3 on all 6 queries. 
+4. Practice #2 and #3 on all 6 queries.
+
+25th Jan 2022:
+1. Projections and DTO classes
+2. Brief intro to Spring framework
+
+HTTP methods: GET, PUT, POST, DELETE, PATCH
+Servelets
+
+Web applications
+Client -> Server
+GET: Take request from client -> Servelet -> Process the request -> Frame the response -> Send response to client
+POST: Send student data from client -> Servelet -> Process the request -> Frame the response -> Send response to client
+
+Spring boot:
+Entity -> Table, Id, Column, JoinColumn
+JPARepository
+Controller
+Service
+Component
+Autowired
+RestController
+
+DB Table -> Class in Java -> Get data from DB and assign it to objects of that class
+Student table -> Student class -> Get data from DB and assign it to objects of Student class
+
+@Entity:
+@Table
+@Id
+if integer -> AUTO INCREMENT on the column
+if String -> Use Generator annotions to let spring framework create unique primary keys
+@Column
+
+Interface - JPARepository : Annotation - @Repository
+Each entity will have one repository interface.
+Just by writing the keyword based methods, we can have Spring generate the queries for us.
+Advantages: Spring will generate performant queries, our code will be clean.
+Keyword reference: https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation
+
+@Controller, @Service, @Component
+Component is parent interface of Controller and Service.
+Component - Spring manages the objects related to component, so that duplicate or unnecessary objects are not created.
+
+Eg for Component: Connection object
+
+Controller - All it gets is Component annotation funtionality. We write logic inside a controller.
+Service - All it gets is Component annotation funtionality. We write logic inside a service.
+Controllers are usually exposed to public through APIs
+Services are accessed from Controllers
+JPARepositories are accessed from Services
+
+Controllers -> Services -> JPARepositories
+We use Components inside Controllers and Services
+
+All Components are retrieved from memory through Autowired annotation
