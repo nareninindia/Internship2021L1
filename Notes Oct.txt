@@ -1214,12 +1214,13 @@ POST: Send student data from client -> Servelet -> Process the request -> Frame 
 
 Spring boot:
 Entity -> Table, Id, Column, JoinColumn
-JPARepository
+JPARepository -> Respository, Query
 Controller
 Service
 Component
 Autowired
-RestController
+RestController -> RequestMapping, PostMapping/GetMapping/DeleteMapping/PutMapping/PatchMapping, RequestBody, RequestParam, ResponseEntity
+Transactional -> Takes care of transaction
 
 DB Table -> Class in Java -> Get data from DB and assign it to objects of that class
 Student table -> Student class -> Get data from DB and assign it to objects of Student class
@@ -1253,3 +1254,11 @@ Controllers -> Services -> JPARepositories
 We use Components inside Controllers and Services
 
 All Components are retrieved from memory through Autowired annotation
+
+transaction:
+Zomato -> Store is open or not(Read), delivery is possible or not(Read), pizza is available or not(Read), Order(Write), OrderItem(Write)
+
+If OrderItem write operation fails, Order record should get reverted -> Need to put in same DB transaction.
+c.startTransaction()
+c.endTransaction()
+Spring -> @Transactional
