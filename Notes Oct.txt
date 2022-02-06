@@ -1262,3 +1262,44 @@ If OrderItem write operation fails, Order record should get reverted -> Need to 
 c.startTransaction()
 c.endTransaction()
 Spring -> @Transactional
+
+6th Feb 2022:
+1. Create a Sping boot web application using Spring initialzr - Done
+2. Create a Github repo and put the project in Github - Done
+3. Add DB credentials and connecting to the DB - Done
+4. Create a ping API endPoint through a PingController class - Done
+5. Create 3 entity models for the DB tables - Done
+6. Create 3 controllers, 3 services and 3 repositories to access the entities - Done
+7. Write API endpoints to the queries - Done
+8. Test the APIs using postman - Done
+9. Save using API. - Done
+
+spring.datasource.driverClassName=org.postgresql.Driver
+spring.datasource.maxActive=10
+spring.datasource.maxIdle=5
+spring.datasource.minIdle=2
+spring.datasource.initialSize=5
+spring.datasource.removeAbandoned=true
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQL81Dialect
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/shopme
+spring.datasource.username=postgres
+spring.datasource.password=password
+
+Web application -> ApplicationServer(Jar) -> WebServer(Tomcat) -> Access https
+
+Controller(Rest) -> Service -> Repository(JpaRepository) -> DB
+1. Gave us data.
+2. Gave us data with handling of foriegnKeys.
+3. Converted to JSON automatically in the response.
+
+1. Write a query to print all students in ascending order of names. - Done
+2. Write a query to print last 2 students. - Homework (pagination - Read JPA related pagination docs)
+3. Write a query to print student name and his/her department name. If department name is not available, then null should get printed. - Done (Can be done using projections with limited columns)
+4. Write a query to print student name and his/her hod name. If hod name is not available, then null should get printed. - Done (Can be done using projections with limited columns)
+5. Write a query to print all department names which end with 'E' (capital E) - Homework
+6. Write a query to print all department names which have 'E' or 'e' in their name. - Homework
